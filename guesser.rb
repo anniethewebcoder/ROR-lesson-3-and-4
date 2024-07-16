@@ -15,6 +15,12 @@ loop do
     print "Enter answer: "
     answer = gets.chomp.to_i
     
+    if number == low || number == high
+        puts ""
+        puts "Are you lying to me?"
+        puts ""
+    end
+
     case answer
     when 1
         puts "Alright! I got it!"
@@ -41,7 +47,4 @@ loop do
         high = number
     end
 
-    if low == number || high == number
-        puts "Are you lying to me?"
-    end
 end
